@@ -26,7 +26,6 @@ const TeamTable = ( { teams, players } ) => {
             </thead>
             <tbody>
                 { teams.map( team => {
-                    console.log("Players - Table:", players);
                     return(
                         <Row 
                             key={ team.id }    

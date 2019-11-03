@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Cell = ( { team, line, pick }) => {
+const Cell = ( { team, line, pick, lock }) => {
     const { wins, gamesPlayed } = team;
     const projectedWins = Math.round( 82 * wins / gamesPlayed );
 
@@ -17,14 +17,15 @@ const Cell = ( { team, line, pick }) => {
     }
     
     return(
-        <td style={ applyHighlighting( pick ) }>{ pick }</td>
+        <td style={ applyHighlighting( pick ) }>{ pick + (lock ? ' * ' : '') }</td>
     );
 }
 
 Cell.propTypes = {
     team: PropTypes.object.isRequired,
     line: PropTypes.number.isRequired,
-    pick: PropTypes.string.isRequired
+    pick: PropTypes.string.isRequired,
+    lock: PropTypes.bool.isRequired
 }
 
 export default Cell;

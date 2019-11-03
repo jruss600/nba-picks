@@ -19,17 +19,13 @@ const Results = ( { teams, players }) => {
         player.score = 0;
         teams.map( team => {
             const factor = (PICKS[player.name].locks.includes(team.team) ? 2 : 1); 
-            // console.log("Team:", team.team, "Points:", factor*calcPoints(team, PICKS[player.name][team.team]));          
             return player.score += ( factor * calcPoints( team, PICKS[player.name][team.team]));
         });
         return players;
     });
 
     // sort the results
-    let playersForSorting = players;
-    
-    let results = [];
-    results = playersForSorting.sort(( a, b ) => (a.score > b.score) ? -1 : (a.score === b.score) ? 0 : 1 );
+    let sortedResults = [...players].sort(( a, b ) => (a.score > b.score) ? -1 : (a.score === b.score) ? 0 : 1 );
 
     return(
 
@@ -51,12 +47,12 @@ const Results = ( { teams, players }) => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {results.map( (result, i) => {
+                                {sortedResults.map( (player, i) => {
                                     return(
                                         <tr key={i}>
                                             <td>{i + 1}</td>
-                                            <td>{ result.name }</td>
-                                            <td>{ result.score }</td>
+                                            <td>{ player.name }</td>
+                                            <td>{ player.score }</td>
                                         </tr>
                                     )
                                 })}

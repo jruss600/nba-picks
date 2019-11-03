@@ -6,7 +6,6 @@ import PICKS from '../data/picks';
 const Row = ( { team, line, players } ) => {
     const { logo, wins, gamesPlayed } = team;
     const projectedWins = Math.round( 82 * wins / gamesPlayed );
-    console.log("Players- Row:", players);
 
     return(
         <tr>
@@ -16,13 +15,13 @@ const Row = ( { team, line, players } ) => {
             <td>{ wins }</td>
             <td> { projectedWins }</td>
             { players.map( ( player, i ) =>  {
-                console.log("Player Row Loop:", player.name);
                 return(
                     <Cell 
                         key={ `${team}-${i}`}
                         team={ team }
                         line={ line }
-                        pick={ PICKS[player.name][team.team] }    
+                        pick={ PICKS[player.name][team.team] }
+                        lock={ PICKS[player.name].locks.includes(team.team) }    
                     />);    
             })}
         </tr>

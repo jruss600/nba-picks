@@ -64,15 +64,14 @@ class Picks extends Component {
         ];
 
         if( loaded ){
-            console.log("PICKS:", players);
             return(
                 <div style={{padding: '10px'}}>
                     <h2 style={{padding: '10px', textDecoration: 'underline'}}>NBA Picks</h2>
                     <Legend />
-                    {/* <Results
+                    <Results
                         teams={ teams }
                         players={ players }
-                    /> */}
+                    />
                     <TeamTable teams={ teams } players={ players }/>
                 </div>   
             )
