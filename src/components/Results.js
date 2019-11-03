@@ -11,21 +11,25 @@ const Results = ( { teams, players }) => {
     const calcPoints = ( team, pick ) => {
         const diff = Math.round( 82 * team.wins / team.gamesPlayed ) - LINES[team.team];
         if (diff === 0 ) { return 0 }
-        return ((diff > 0 && pick === 'O') || (diff < 0 && pick === 'U')) ? diff : (-1 * diff);
+        return ((diff > 0 && pick === 'O') || (diff < 0 && pick === 'U')) ? Math.abs(diff) : (-1 * Math.abs(diff));
     }
     
     players.map( player => {
+        console.log("Player Loop:", player.name);
         player.score = 0;
         teams.map( team => {
-            const factor = (PICKS[player.name].locks.includes(team.team) ? 2 : 1);            
+            const factor = (PICKS[player.name].locks.includes(team.team) ? 2 : 1); 
+            // console.log("Team:", team.team, "Points:", factor*calcPoints(team, PICKS[player.name][team.team]));          
             return player.score += ( factor * calcPoints( team, PICKS[player.name][team.team]));
         });
         return players;
-    })
+    });
 
     // sort the results
+    let playersForSorting = players;
+    
     let results = [];
-    results = players.sort(( a, b ) => (a.score > b.score) ? -1 : (a.score === b.score) ? 0 : 1 );
+    results = playersForSorting.sort(( a, b ) => (a.score > b.score) ? -1 : (a.score === b.score) ? 0 : 1 );
 
     return(
 
