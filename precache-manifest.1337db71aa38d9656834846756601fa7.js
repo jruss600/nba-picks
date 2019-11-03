@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79c8702f8bd39f592997b638a0a5a2e4",
+    "revision": "8139e03936e24fdc771f68b6443a69f1",
     "url": "/nba-picks/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nba-picks/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "e036523ca144e6aabb58",
+    "revision": "332fe0acd7e14f4d610f",
     "url": "/nba-picks/static/css/main.75cc195e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nba-picks/static/js/2.8895af40.chunk.js"
   },
   {
-    "revision": "e036523ca144e6aabb58",
-    "url": "/nba-picks/static/js/main.d87cef65.chunk.js"
+    "revision": "332fe0acd7e14f4d610f",
+    "url": "/nba-picks/static/js/main.d8d032f7.chunk.js"
   },
   {
     "revision": "bed3a884b9810513ad7d",
