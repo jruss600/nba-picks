@@ -17,7 +17,8 @@ const Results = ( { teams, players }) => {
     players.map( player => {
         player.score = 0;
         teams.map( team => {
-            return player.score += calcPoints( team, PICKS[player.name][team.team])
+            const factor = (PICKS[player.name].locks.includes(team.team) ? 2 : 1);            
+            return player.score += ( factor * calcPoints( team, PICKS[player.name][team.team]));
         });
         return players;
     })
