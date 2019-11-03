@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import TeamTable from './TeamTable';
+import Spinner from 'react-bootstrap/Spinner';
 import Legend from './Legend';
+import TeamTable from './TeamTable';
+import Results from './Results';
 
 class Picks extends Component {
     state = {
@@ -34,20 +36,52 @@ class Picks extends Component {
 
     render(){
         const { teams, loaded } = this.state;
+        const players = [
+            {
+                name: 'AD',
+            },
+            {
+                name: 'JR',
+            },
+            {
+                name: 'JT',
+            },
+            {
+                name: 'MM',
+            },
+            {
+                name: 'JF',
+            },
+            {
+                name: 'TK',
+            },
+            {
+                name: 'JW',
+            },
+            {
+                name: 'ZN',
+            }
+        ];
+
         if( loaded ){
-            console.log(teams);
             return(
                 <div className="container">
-                    <h2>NBA Picks</h2>
+                    <h2 style={{padding: '10px', textDecoration: 'underline'}}>NBA Picks</h2>
                     <Legend />
-                    <TeamTable teams={ teams }/>
-                    <p>Results</p>
-                </div>
-                
+                    <Results
+                         teams={ teams }
+                         players={ players }
+                    />
+                    <TeamTable teams={ teams } players={ players }/>
+                </div>   
             )
         } else {
             return(
-                <div>Loading...</div>
+                <div>
+                    <Spinner animation="border" role="status">
+                        <span className="sr-only">Loading...</span>
+                    </Spinner>
+                </div>
             )
         }
     }

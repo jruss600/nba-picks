@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 import Row from './Row';
 import LINES from '../data/lines';
 
-const TeamTable = ( { teams } ) => {
+const TeamTable = ( { teams, players } ) => {
     return(
         <Table responsive>
             <thead>
@@ -13,8 +13,15 @@ const TeamTable = ( { teams } ) => {
                     <th>Team</th>
                     <th>Line</th>
                     <th>Wins</th>
-                    <th>Projected Wins</th>
-                    <th>DOBS</th>
+                    <th>Projected</th>
+                    <th>AD</th>
+                    <th>JR</th>
+                    <th>JT</th>
+                    <th>MM</th>
+                    <th>JF</th>
+                    <th>TK</th>
+                    <th>JW</th>
+                    <th>ZN</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +31,7 @@ const TeamTable = ( { teams } ) => {
                             key={ team.id }    
                             team={ team }
                             line={ LINES[team.team] }
+                            players={ players }
                         />
                     )
                 })}
@@ -33,7 +41,8 @@ const TeamTable = ( { teams } ) => {
 }
 
 TeamTable.propTypes = {
-    team: PropTypes.object.isRequired,
+    teams: PropTypes.array.isRequired,
+    players: PropTypes.array.isRequired
 }
 
 
