@@ -65,12 +65,12 @@ class Picks extends Component {
 
         if( loaded ){
             return(
-                <div className="container">
+                <div style={{padding: '10px'}}>
                     <h2 style={{padding: '10px', textDecoration: 'underline'}}>NBA Picks</h2>
                     <Legend />
                     <Results
-                         teams={ teams }
-                         players={ players }
+                        teams={ teams }
+                        players={ players }
                     />
                     <TeamTable teams={ teams } players={ players }/>
                 </div>   
