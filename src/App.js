@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
-import TeamTable from './components/TeamTable';
+import Picks from './components/Picks';
 
 
 function App() {
   return (
     <div className="App">
-        <p>
-          App goes here
-        </p>
-        <TeamTable />
+        <Picks />
     </div>
   );
 }
