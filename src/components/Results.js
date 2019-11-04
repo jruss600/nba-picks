@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import LINES from '../data/lines';
 import PICKS from '../data/picks';
 import Table from 'react-bootstrap/Table';
@@ -64,5 +65,9 @@ class Results extends Component {
     }
 }
 
+Results.propTypes = {
+    teams: PropTypes.object.isRequired,
+    players: PropTypes.array.isRequired
+}
 
 export default Results;
