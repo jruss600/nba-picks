@@ -32,6 +32,7 @@ class Picks extends Component {
         .catch( error => {
             alert( 'Error: ', error )
         });
+        console.log(this.state);
     }
 
     render(){
@@ -77,7 +78,7 @@ class Picks extends Component {
             )
         } else {
             return(
-                <div>
+                <div className="container">
                     <Spinner animation="border" role="status">
                         <span className="sr-only">Loading...</span>
                     </Spinner>

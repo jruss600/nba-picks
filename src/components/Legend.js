@@ -16,10 +16,10 @@ const Legend = () => {
                     <Card.Body>
                         <div className="container">
                             <div className="row" style={{margin: '0px 150px 0px 150px'}}>
-                            <div className="col-sm projWin"><span style={{verticalAlign: 'middle'}}>Projected Win</span></div>
-                            <div className="col-sm projLoss"><span style={{verticalAlign: 'middle'}}>Projected Loss</span></div>
-                            <div className="col-sm win"><span style={{verticalAlign: 'middle'}}>Win</span></div>
-                            <div className="col-sm loss"><div>Loss</div></div>
+                                <div className="col-sm projWin"><span style={{verticalAlign: 'middle'}}>Projected Win</span></div>
+                                <div className="col-sm projLoss"><span style={{verticalAlign: 'middle'}}>Projected Loss</span></div>
+                                <div className="col-sm win"><span style={{verticalAlign: 'middle'}}>Win</span></div>
+                                <div className="col-sm loss"><div>Loss</div></div>
                             </div>
                         </div>
                     </Card.Body>

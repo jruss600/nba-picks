@@ -13,7 +13,7 @@ const TeamTable = ( { teams, players } ) => {
                     <th>Team</th>
                     <th>Line</th>
                     <th>Wins</th>
-                    <th>Projected</th>
+                    <th>Pace</th>
                     <th>AD</th>
                     <th>JR</th>
                     <th>JT</th>
