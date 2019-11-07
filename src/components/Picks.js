@@ -32,7 +32,6 @@ class Picks extends Component {
         .catch( error => {
             alert( 'Error: ', error )
         });
-        console.log(this.state);
     }
 
     render(){
@@ -68,12 +67,12 @@ class Picks extends Component {
             return(
                 <div style={{padding: '10px'}}>
                     <h2 style={{padding: '10px', textDecoration: 'underline'}}>NBA Picks</h2>
-                    <Legend />
                     <Results
                         teams={ teams }
                         players={ players }
                     />
                     <TeamTable teams={ teams } players={ players }/>
+                    <Legend />
                 </div>   
             )
         } else {

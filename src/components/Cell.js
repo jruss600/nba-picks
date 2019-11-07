@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Cell as ReactCell } from 'react-sticky-table';
 
 class Cell extends Component {
 
@@ -19,7 +20,7 @@ class Cell extends Component {
         const { team, line, pick, lock } = this.props;
         const { wins, gamesPlayed } = team;
         return(
-            <td style={ this.applyHighlighting( pick, wins, line, gamesPlayed ) }>{ pick + (lock ? ' * ' : '') }</td>
+            <ReactCell style={ this.applyHighlighting( pick, wins, line, gamesPlayed ) }>{ pick + (lock ? ' * ' : '') }</ReactCell>
         )
     }
 }

@@ -66,7 +66,7 @@ class Results extends Component {
 }
 
 Results.propTypes = {
-    teams: PropTypes.object.isRequired,
+    teams: PropTypes.array.isRequired,
     players: PropTypes.array.isRequired
 }
 
