@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nba-picks/static/css/main.7a0155bc.chunk.css",
-    "main.js": "/nba-picks/static/js/main.59f9e9e3.chunk.js",
-    "main.js.map": "/nba-picks/static/js/main.59f9e9e3.chunk.js.map",
+    "main.js": "/nba-picks/static/js/main.1cce4deb.chunk.js",
+    "main.js.map": "/nba-picks/static/js/main.1cce4deb.chunk.js.map",
     "runtime-main.js": "/nba-picks/static/js/runtime-main.90ac16d2.js",
     "runtime-main.js.map": "/nba-picks/static/js/runtime-main.90ac16d2.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/nba-picks/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.7ed901f3.chunk.js": "/nba-picks/static/js/2.7ed901f3.chunk.js",
-    "static/js/2.7ed901f3.chunk.js.map": "/nba-picks/static/js/2.7ed901f3.chunk.js.map",
+    "static/js/2.7c4f5655.chunk.js": "/nba-picks/static/js/2.7c4f5655.chunk.js",
+    "static/js/2.7c4f5655.chunk.js.map": "/nba-picks/static/js/2.7c4f5655.chunk.js.map",
     "index.html": "/nba-picks/index.html",
-    "precache-manifest.cd9f99b0b8d40cba825486c8bd12f2ec.js": "/nba-picks/precache-manifest.cd9f99b0b8d40cba825486c8bd12f2ec.js",
+    "precache-manifest.cb734e7bdeb39103595be29840135eb1.js": "/nba-picks/precache-manifest.cb734e7bdeb39103595be29840135eb1.js",
     "service-worker.js": "/nba-picks/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/nba-picks/static/css/2.b0bb7f2c.chunk.css.map",
     "static/css/main.7a0155bc.chunk.css.map": "/nba-picks/static/css/main.7a0155bc.chunk.css.map"
@@ -17,8 +17,8 @@
   "entrypoints": [
     "static/js/runtime-main.90ac16d2.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.7ed901f3.chunk.js",
+    "static/js/2.7c4f5655.chunk.js",
     "static/css/main.7a0155bc.chunk.css",
-    "static/js/main.59f9e9e3.chunk.js"
+    "static/js/main.1cce4deb.chunk.js"
   ]
 }
